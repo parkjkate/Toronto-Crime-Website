@@ -1,2 +1,2 @@
 # torontocrime
-Data Visualization
+Data Visualization & Machine Learning 
