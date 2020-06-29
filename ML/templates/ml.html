@@ -48,25 +48,25 @@ input {
 
 form {
     margin: auto;
-    width: 60%;
+    width: 100%;
 
 }
 .result {
     margin: auto;
-    width: 60%;
-    border: 1px solid #ccc;
-    background-color: white;
+    width: 100%;
+  
 }
 fieldset 
 	{
-		border: 1px solid #ddd !important;
 		margin: 0;
 		padding: 10px;       
 		position: relative;
 		border-radius:4px;
-		background-color:white;
 		padding-left:10px!important;
 	}	
+
+
+
 	
 		legend
 		{
@@ -115,7 +115,7 @@ input{
 
 </style>
 <head>
-    <h2>Predicting the type of crime in Toronto</h2>
+    <h2>Predicting the type of crime committed in Toronto</h2>
 </head>
 <form action="{{ url_for('main') }}" method="POST">
     <fieldset>
@@ -142,13 +142,10 @@ input{
         <br> Was the crime reported same day it occurred? (1/0) (ex:1=Yes,0=No):    <br>
         <input name="same_day_reported" type="number" step=".01" required><br><br>
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict!</button>
-        <br><br><br>
-    </fieldset>
 </form>
-<br>
 <div class="result" align="center">
-  <br>
-     <br> Predicted Crime:
-     <p style="font-size:50px" step=".01">{{ result }}</p>
+
+     <br>   <p style="font-size:35px" step=".01">PREDICTED CRIME:
+     <p style="font-size:30px" step=".01">{{ result }}</p>
 </div>
 </html>
