@@ -90,7 +90,7 @@ button{
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-image: linear-gradient (315deg, #5de6de 0%, #b58ecc 74%);
+  background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
   text-transform: uppercase;
   border: none;
   border-radius: 15px;
@@ -115,40 +115,44 @@ input{
 
 </style>
 <head>
-    <h2>Predicting the type of crime in Toronto</h2>
+    <br><br><br>
+    <title>Predicting the type of crime in committed in Toronto</title>
 </head>
+<h2><center>Prediction on the type of crime committed in Toronto</h3></center>
+<br><br>
 <form action="{{ url_for('main') }}" method="POST">
-    <fieldset>
+    <fieldset style="min-height:100px;">
         <legend>Input values:</legend>
-        The premise of where the crime (Commercial, Other, Apartment, House, Outside):
-    <br>
-        <input name="premisetype" type="text" step=".01" required>
+        The year the crime was reported:<br>
+        <input name="reportedyear" type="number" step=".01" required>
         <br>
-        <br> The year the crime was reported (2014-2019):   <br>
-        <input name="reportedyear" type="text" step=".01" required>
+        <br> The day the crime was reported:<br>
+        <input name="reportedday" type="number" step=".01" required>
         <br>
-        <br> The month the crime was reported (ex: March):  <br>
-        <input name="reportedmonth" type="text" step=".01" required>
+        <br> The day of year the crime was reported:<br>
+        <input name="reporteddayofyear" type="number" step=".01" required>
         <br>
-        <br> The day the crime was reported (ex: 23):   <br>
-        <input name="reportedday" type="text" step=".01" required>
-        <br>
-        <br> The day of week the crime was reported (ex: Tuesday):   <br>
-        <input name="reporteddayofweek" type="text" step=".01" required>
-        <br>
-        <br> The hour the crime was reported (0-24):     <br>
-        <input name="reportedhour" type="text" step=".01" required>
-        <br>
-        <br> Was the crime reported same day it occurred? (1/0) (ex:1=Yes,0=No):    <br>
-        <input name="same_day_reported" type="number" step=".01" required><br><br>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict!</button>
-        <br><br><br>
-    </fieldset>
+        <br> The hour the crime was reported:<br>
+        <input name="reportedhour" type="number" step=".01" required>
+        <br> <br> Same day  reported? (1/0):<br>
+        <input name="same_day_reported" type="number" step=".01" required>
+        <br><br>  Same month  reported? (1/0):<br>
+        <input name="same_month_reported" type="number" step=".01" required>
+        <br><br>  Same year  reported? (1/0):<br>
+        <input name="same_year_reported" type="number" step=".01" required>
+        <br><br>  Same Day of Week  reported? (1/0):<br>
+        <input name="same_dow_reported" type="number" step=".01" required>
+        <br>   <br> Same hour  reported? (1/0):<br>
+        <input name="same_hour_reported" type="number" step=".01" required>
+         <br><br><button type="submit" class="btn btn-primary btn-block btn-large">Predict!</button>
+         <br><br>
+        </fieldset>
 </form>
-<br>
+
 <div class="result" align="center">
-  <br>
-     <br> Predicted Crime:
+     <br>PREDICTED CRIME:
      <p style="font-size:50px" step=".01">{{ result }}</p>
+    {% endif %}
 </div>
 </html>
+
