@@ -1,2 +1,4 @@
 # torontocrime
-Data Visualization & Machine Learning 
+Framework: Flask 
+Platforms: Heroku & Netlify
+Languages: Python, HTML, CSS
