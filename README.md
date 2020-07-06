@@ -3,4 +3,4 @@ Framework: Flask
 
 Platforms: Heroku & Netlify
 
-Languages: Python, HTML, CSS
+Languages: Python, HTML, CSS, SCSS, JavaScript
