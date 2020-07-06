@@ -1,7 +1,7 @@
 # torontocrime
 Framework: Flask 
 
-Platforms: Heroku & Netlify
+Deployment: Heroku & Netlify
 
 Languages: Python, HTML, CSS, SCSS, JavaScript
 
